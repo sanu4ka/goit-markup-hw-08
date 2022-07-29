@@ -1,0 +1,22 @@
+.header {
+  font-weight: 500;
+  border-bottom: 1px solid var(--header-border);
+
+  & .container,
+  &-nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contacts {
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  fill: currentColor;
+
+  & li:not(:last-child) {
+    margin-right: 30px;
+  }
+}

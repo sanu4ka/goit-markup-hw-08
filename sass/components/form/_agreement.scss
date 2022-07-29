@@ -1,0 +1,17 @@
+.agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    display: inline-block;
+    line-height: 1.71;
+    margin-left: 23px;
+    color: var(--subtext-color);
+  }
+
+  &__link {
+    text-decoration-line: underline;
+    color: var(--focus-color);
+  }
+}

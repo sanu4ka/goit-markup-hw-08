@@ -1,0 +1,22 @@
+.works {
+  padding-top: 0;
+
+  &-list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    z-index: -1;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: var(--indent);
+  }
+
+  &__description {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--maintext-color);
+  }
+}

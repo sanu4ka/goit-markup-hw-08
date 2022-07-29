@@ -1,0 +1,33 @@
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: inline-block;
+    width: 170px;
+    height: 92px;
+  }
+}
+
+.clients-list__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: var(--social-icon-clr);
+  border: 1px solid var(--social-icon-clr);
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--focus-color);
+    border-color: var(--focus-color);
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}
