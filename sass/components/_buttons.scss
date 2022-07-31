@@ -1,4 +1,6 @@
 .button {
+  width: 200px;
+  height: 50px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -10,10 +12,6 @@
   border-radius: 4px;
   border: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero__button {
-  padding: 10px 32px;
 
   &:hover,
   &:focus {
@@ -22,14 +20,7 @@
 }
 
 .send-button {
-  width: 200px;
-  height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  &:focus,
-  &:hover {
-    background-color: var(--focus-btnclr);
-  }
 }
 
 .close-button {
@@ -54,18 +45,11 @@
 }
 
 .subscribe-section__button {
-  width: 200px;
-  height: 50px;
   margin-left: 12px;
   display: inline-flex;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   align-items: center;
   justify-content: center;
-
-  &:hover,
-  &:focus {
-    background-color: var(--focus-btnclr);
-  }
 }
 
 .filter__button {

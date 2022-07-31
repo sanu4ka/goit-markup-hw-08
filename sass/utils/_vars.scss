@@ -19,6 +19,14 @@
   --works-background: rgba(47, 48, 58, 0.8);
   --portfolio-animationbcg: rgba(33, 150, 243, 0.9);
   --input-border: rgba(33, 33, 33, 0.2);
-  --items: 3;
+  --items: 1;
   --indent: 30px;
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 3;
+  }
 }

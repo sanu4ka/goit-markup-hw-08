@@ -1,11 +1,20 @@
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--indent);
 
   &__item {
-    display: inline-block;
-    width: 170px;
+    width: 210px;
     height: 92px;
+
+    @media screen and (min-width: 768px) {
+      width: 226x;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
   }
 }
 
