@@ -19,14 +19,22 @@
   </head>
   <body>
     <!-- Хедер -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
+        <a class="logo link" href="./index.html"
+          >Web<span class="logo__second-part">Studio</span></a
+        >
         <nav class="header-nav">
-          <a class="logo link" href="./index.html">Web<span class="logo__second-part">Studio</span></a>
           <ul class="nav-list list">
-            <li><a class="nav-list__link link" href="./index.html">Студия</a></li>
-            <li><a class="nav-list__link link nav-list__link--current" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="nav-list__link link" href="">Контакты</a></li>
+            <li class="nav-list__item">
+              <a class="nav-list__link link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link link nav-list__link--current" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav-list__item"><a class="nav-list__link link" href="">Контакты</a></li>
           </ul>
         </nav>
         <ul class="contacts list">
@@ -47,8 +55,64 @@
             </a>
           </li>
         </ul>
+        <button class="menu-button sub-button" mobile-menu-open type="button">
+          <svg width="24px" height="16px">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu is-hidden" mobile-menu>
+          <ul class="mobile-menu-navigation list">
+            <li class="mobile-menu-navigation__item">
+              <a class="mobile-menu-navigation__link link" href="./index.html">Студия</a>
+            </li>
+            <li class="mobile-menu-navigation__item">
+              <a
+                class="mobile-menu-navigation__link link mobile-menu-navigation__link--current"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu-navigation__item">
+              <a class="mobile-menu-navigation__link link" href="">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-contacts list">
+            <li class="mobile-menu-contacts__item">
+              <a class="mobile-menu-contacts__link link" href="tel:+380961111111"
+                >+ 38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu-contacts__item">
+              <a
+                class="mobile-menu-contacts__link link mobile-menu-contacts__link--subcolor"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-social list">
+            <li class="mobile-menu-social__item">
+              <a class="mobile-menu-social__link link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a class="mobile-menu-social__link link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a class="mobile-menu-social__link link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a class="mobile-menu-social__link link" href="">LinkedIn</a>
+            </li>
+          </ul>
+          <button class="close-button sub-button" mobile-menu-close>
+            <svg width="18px" height="18px">
+              <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <!-- Мейн -->
     <main>
@@ -76,12 +140,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/techno.jpg"
-                    alt="Ноутбук с изображением сайта"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-01_pc.jpg    1x,
+                        ./images/portfolio/img-01_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-01_tb.jpg    1x,
+                        ./images/portfolio/img-01_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-01_mp.jpg    1x,
+                        ./images/portfolio/img-01_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-01_mp.jpg"
+                      alt="Ноутбук с изображением сайта"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -99,12 +189,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/poster.jpg"
-                    alt="Два баскетболиста"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-02_pc.jpg    1x,
+                        ./images/portfolio/img-02_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-02_tb.jpg    1x,
+                        ./images/portfolio/img-02_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-02_mp.jpg    1x,
+                        ./images/portfolio/img-02_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-02_mp.jpg"
+                      alt="Два баскетболиста"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -124,12 +240,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/seafood.jpg"
-                    alt="Логотип с изображением рыбы и названием"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-03_pc.jpg    1x,
+                        ./images/portfolio/img-03_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-03_tb.jpg    1x,
+                        ./images/portfolio/img-03_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-03_mp.jpg    1x,
+                        ./images/portfolio/img-03_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-03_mp.jpg"
+                      alt="Логотип с изображением рыбы и названием"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -147,7 +289,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img src="./images/portfolio/prime.jpg" alt="Наушники" height="294" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-04_pc.jpg    1x,
+                        ./images/portfolio/img-04_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-04_tb.jpg    1x,
+                        ./images/portfolio/img-04_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-04_mp.jpg    1x,
+                        ./images/portfolio/img-04_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-04_mp.jpg"
+                      alt="Наушники"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -165,12 +338,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/boxes.jpg"
-                    alt="Две коробочки"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-05_pc.jpg    1x,
+                        ./images/portfolio/img-05_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-05_tb.jpg    1x,
+                        ./images/portfolio/img-05_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-05_mp.jpg    1x,
+                        ./images/portfolio/img-05_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-05_mp.jpg"
+                      alt="Две коробочки"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -188,12 +387,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/inspiration.jpg"
-                    alt="ПК с изображением сайта"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-06_pc.jpg    1x,
+                        ./images/portfolio/img-06_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-06_tb.jpg    1x,
+                        ./images/portfolio/img-06_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-06_mp.jpg    1x,
+                        ./images/portfolio/img-06_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-06_mp.jpg"
+                      alt="ПК с изображением сайта"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -211,12 +436,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/limited.jpg"
-                    alt="Книга с картиками"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-07_pc.jpg    1x,
+                        ./images/portfolio/img-07_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-07_tb.jpg    1x,
+                        ./images/portfolio/img-07_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-07_mp.jpg    1x,
+                        ./images/portfolio/img-07_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-07_mp.jpg"
+                      alt="Книга с картиками"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -236,12 +487,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/lab.jpg"
-                    alt="Шилдик с надписью"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-08_pc.jpg    1x,
+                        ./images/portfolio/img-08_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-08_tb.jpg    1x,
+                        ./images/portfolio/img-08_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-08_mp.jpg    1x,
+                        ./images/portfolio/img-08_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-08_mp.jpg"
+                      alt="Шилдик с надписью"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -259,12 +536,38 @@
             <li class="portfolio-list__item card-set">
               <a class="portfolio-list__link link" href="">
                 <div class="animation-box">
-                  <img
-                    src="./images/portfolio/growing.jpg"
-                    alt="Человек работает за ноутбуком"
-                    height="294"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-09_pc.jpg    1x,
+                        ./images/portfolio/img-09_pc@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-09_tb.jpg    1x,
+                        ./images/portfolio/img-09_tb@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-09_mp.jpg    1x,
+                        ./images/portfolio/img-09_mp@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/img-09_mp.jpg"
+                      alt="Человек работает за ноутбуком"
+                      height="294"
+                      width="450"
+                    />
+                  </picture>
                   <div class="portfolio-overlay">
                     <p class="portfolio-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -285,10 +588,12 @@
     </main>
 
     <!-- Футер -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="adress-section">
-          <a class="logo link" href="./index.html">Web<span class="logo__second-part">Studio</span></a>
+          <a class="logo link" href="./index.html"
+            >Web<span class="logo__second-part">Studio</span></a
+          >
           <address class="adress">
             <ul class="address-list list">
               <li class="address-list__item">
@@ -297,9 +602,7 @@
                 >
               </li>
               <li class="address-list__item">
-                <a class="contact-link link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+                <a class="contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li class="address-list__item">
                 <a class="contact-link link" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -344,9 +647,15 @@
           <strong class="subscribe-section__title">Подпишитесь на рассылку</strong>
           <div class="subscribe-section__form">
             <label>
-                <input class="subscribe-input form__input" type="email" name="email-subscribe" placeholder="E-mail"></input>
+              <input
+                class="subscribe-input form__input"
+                type="email"
+                name="email-subscribe"
+                placeholder="E-mail"
+              />
             </label>
-            <button class="subscribe-section__button button" type="submit">Подписаться
+            <button class="subscribe-section__button button" type="submit">
+              Подписаться
               <span class="subscribe-section__icon">
                 <svg width="24px" height="24px">
                   <use href="./images/icons.svg#icon-send"></use>
@@ -356,6 +665,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -9,14 +9,27 @@
   }
 }
 
-.contacts {
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  fill: currentColor;
+.header-nav {
+  margin-right: 84px;
 
-  & li:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  fill: currentColor;
+  letter-spacing: 0.02em;
+  gap: 10px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    gap: 30px;
   }
 }

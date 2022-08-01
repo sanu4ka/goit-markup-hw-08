@@ -2,10 +2,7 @@
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
-
-  & li:not(:last-child) {
-    margin-right: 50px;
-  }
+  gap: 50px;
 
   &__link {
     color: var(--text-color);

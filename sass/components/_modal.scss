@@ -1,11 +1,11 @@
 .modal {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
+  max-width: 450px;
   height: 609px;
   padding: 40px;
   background-color: var(--mainbcg-color);
@@ -18,7 +18,7 @@
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 1200px) {
-    width: 528px;
+    max-width: 528px;
     height: 581px;
   }
 

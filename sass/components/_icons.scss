@@ -11,19 +11,26 @@
 
 .icon-agreement {
   position: absolute;
-  left: 12px;
+  left: 0;
+  @media screen and (min-width: 1200px) {
+    left: 12px;
+  }
 }
 
 .icon-checkbox {
   display: inline-block;
   position: absolute;
-  left: 12px;
+  left: 0;
   width: 16px;
   height: 15px;
   border: 2px solid var(--text-color);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    left: 12px;
+  }
 
   .agreement__input:checked ~ & {
     background-color: var(--focus-color);

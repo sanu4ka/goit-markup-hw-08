@@ -1,18 +1,13 @@
 .logo {
   font-family: var(--logo-font), sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--focus-color);
 
-  .header & {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .header &__second-part {
-    color: var(--logo-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
   }
 
   .footer &__second-part {
@@ -20,7 +15,29 @@
   }
 
   .footer & {
-    display: inline-block;
+    display: flex;
     margin-bottom: 20px;
+  }
+}
+
+.header .logo {
+  margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &__second-part {
+    color: var(--logo-color);
   }
 }

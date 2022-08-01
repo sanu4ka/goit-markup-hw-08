@@ -23,19 +23,26 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.close-button {
+.subscribe-section__button {
+  margin-left: 12px;
+  display: inline-flex;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--mainbcg-color);
   cursor: pointer;
+  border: 0;
+  background-color: var(--maintext-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
@@ -44,12 +51,22 @@
   }
 }
 
-.subscribe-section__button {
-  margin-left: 12px;
-  display: inline-flex;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  align-items: center;
-  justify-content: center;
+.menu-button {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.close-button {
+  &--pc {
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--mainbcg-color);
+  }
 }
 
 .filter__button {
