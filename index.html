@@ -55,12 +55,16 @@
             </a>
           </li>
         </ul>
-        <button class="menu-button sub-button" mobile-menu-open type="button">
+        <button
+          class="menu-button sub-button js-open-menu"
+          aria-label="Навигационное меню"
+          aria-controls="mobile-menu"
+        >
           <svg width="24px" height="16px">
             <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
-        <div class="mobile-menu is-hidden" mobile-menu>
+        <div class="mobile-menu is-hidden js-menu-container" id="mobile-menu">
           <ul class="mobile-menu-navigation list">
             <li class="mobile-menu-navigation__item">
               <a
@@ -105,7 +109,7 @@
               <a class="mobile-menu-social__link link" href="">LinkedIn</a>
             </li>
           </ul>
-          <button class="close-button sub-button" mobile-menu-close>
+          <button class="close-button sub-button js-close-menu" aria-label="Закрыть меню">
             <svg width="18px" height="18px">
               <use class="icon-close" href="./images/icons.svg#icon-close"></use>
             </svg>
@@ -175,7 +179,7 @@
               </label>
               <button class="send-button button" type="submit">Отправить</button>
             </form>
-            <button class="close-button--pc sub-button" data-modal-close>
+            <button class="close-button--pc sub-button" data-modal-close aria-label="Закрыть окно">
               <svg width="18px" height="18px">
                 <use class="icon-close" href="./images/icons.svg#icon-close"></use>
               </svg>
@@ -658,7 +662,13 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
